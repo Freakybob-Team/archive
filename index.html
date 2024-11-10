@@ -9,14 +9,23 @@
     <h1>The Archives.</h1>
     <p>A collection of Freakybob Team software.</p>
     <marquee direction="right" scrollamount="20">
-        <a href="https://archive.org/download/ligmaballs/lbC%2B%2B.zip"><h1>LigmaBalls (C++)</h1></a>
-        <a href="https://archive.org/download/freakybob-team/MurderBob.zip"><img src="murderbob/logo.png" alt="MurderBob"></a>
+        <a href="https://archive.org/download/ligmaballs/lbC%2B%2B.zip" id="lb"><h1>LigmaBalls (C++)</h1></a>
+        <a href="https://archive.org/download/freakybob-team/MurderBob.zip" id="mb"><img src="murderbob/logo.png" alt="MurderBob"></a>
     </marquee>
     <footer>
         <p>Are we missing something? <a href="mailto:freakybobsite@proton.me">Email us!</a></p>
         <p>(not letting us update the main archive.org item!)</p><s><a href="https://archive.org/download/freakybob-team">archive.org</a></s>
-        <p>Powered by the Internet Archive.</p>
+        <p>Powered by the Internet Archive (default), File Garden (fallback), and Catbox (MurderBob fallback).</p>
+        <button onclick="changeURLs()">internet archive down? click this button to change sources!</button>
     </footer>
     <!-- note to team: this website is a HUGE WIP! do not like expect anything good until I remove this - wish -->
+    <script>
+      function changeURLs() {
+        lb = document.getElementById("lb")
+        mb = document.getElementById("mb")
+        lb.href="https://file.garden/ZylijPWp2Aem2KIR/lbC%2B%2B.zip"
+        mb.href="https://files.catbox.moe/etorub.zip"
+      } 
+    </script>
 </body>
 </html>
